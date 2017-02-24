@@ -1,0 +1,391 @@
+/*
+Theme Name:  Publish - Ian Dunn 2017
+Author:      Ian Dunn
+Author URI:  https://iandunn.name
+Description: Publish child theme for iandunn.name
+Version:     0.1
+License:     GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template:    publish
+*/
+
+
+/********************  Global  ********************/
+body,
+textarea,
+button,
+input,
+select,
+blockquote {
+	font-family: "Muli", sans-serif;
+	font-weight: 300;
+	font-size:   18px;
+	line-height: 1.8;
+	color:       #555;
+}
+
+button,
+input,
+select {
+	font-size: 0.9em;
+}
+
+input[type="text"],
+input[type="email"] {
+	padding-left: 7px;
+}
+
+.site {
+	width:      770px;
+	margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Libre Baskerville", serif;
+	font-weight: normal;
+}
+
+h1 {
+	font-size:   2em;
+	line-height: 1.6em;
+}
+
+h2 {
+	font-size: 1.6em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+p:last-of-type,
+ul:last-of-type,
+ol:last-of-type {
+	margin-bottom: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+blockquote {
+	background-color: #E5F2F8;
+	padding:          2px 7px;
+}
+
+code {
+	background-color: #e3e3e3;
+	color:            #454545;
+	padding:          2px 5px;
+}
+
+	.entry-content .syntaxhighlighter a,
+	.entry-content .syntaxhighlighter div,
+	.entry-content .syntaxhighlighter code,
+	.entry-content .syntaxhighlighter table,
+	.entry-content .syntaxhighlighter table td,
+	.entry-content .syntaxhighlighter table tr,
+	.entry-content .syntaxhighlighter table tbody,
+	.entry-content .syntaxhighlighter table thead,
+	.entry-content .syntaxhighlighter table caption,
+	.entry-content .syntaxhighlighter textarea {
+		font-weight: 300 !important;
+	}
+
+	.entry-content .syntaxhighlighter .bold {
+		font-weight: bold !important;
+	}
+
+.site-header,
+.entry-header,
+.entry-content,
+.widget-area .widget,
+.comment {
+	hyphens: manual;
+}
+
+
+
+/********************  Header  ********************/
+.site-logo img {
+	display:       block;
+	width: 		   125px;
+	margin:        0 auto 15px auto;
+	border-radius: 50%;
+}
+
+.site-title {
+	font-size:  1.6em;
+	text-align: center;
+}
+
+	.site-title a {
+		color: black;
+	}
+
+.site-description {
+	font-family: "Muli", sans-serif;
+	font-size:   0.9em;
+	text-align:  center;
+}
+
+.main-navigation a,
+.main-navigation a:visited {
+	font-size:       0.9em;
+	color:           #3896BD;
+	text-decoration: none;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus,
+.main-navigation a:active {
+	color: #1e6085;
+}
+
+
+
+/********************  Content  ********************/
+/* If there isn't a comments section, then we'd have too much space */
+body.comment-status-closed .site-content article {
+	padding-bottom: 0;
+}
+
+.site-main article:last-of-type {
+	border-bottom: 0;
+}
+
+.entry-content {
+	margin-bottom: 1.4em;
+}
+
+	.entry-content div,
+	.entry-content p,
+	.entry-content ul,
+	.entry-content blockquote {
+		margin-top: 1em;
+	}
+
+		.entry-content p:first-of-type {
+			margin-top: 0;
+		}
+
+	.entry-content p.read-more {
+		margin-top: 1em;
+	}
+
+	.entry-meta {
+		margin-top: 1em;
+	}
+
+		.entry-meta, .entry-meta a {
+			font-size: 0.9em;
+			color: #999;
+		}
+
+			.entry-meta a {
+				text-decoration: underline;
+			}
+
+	.site-archive-type ul {
+		column-count: 2;
+		margin-left: 1em;
+	}
+
+		.site-archive-type li {
+			padding-right: 1em;
+		}
+
+	#searchform {
+		margin-top: 1em;
+	}
+
+		#searchsubmit {
+			margin-left: 5px;
+		}
+
+/* There's nothing there but the edit-link, so it adds a bunch of extra space between elements */
+body.page .entry-meta {
+	display: none;
+}
+
+/* The normal margin-bottom exists to separate .entry-content and .entry-meta, but .entry-meta is hidden in this situation */
+body.page .entry-content {
+	margin-bottom: 0;
+}
+
+#comments {
+	font-size: 1em;
+}
+
+	/*
+	 * Publish outputs #comments even if comments are closed and the count is 0. In order to fix that in the
+	 * template I'd have to add a custom one to this child theme, which is unnecessary clutter. We can just
+	 * hide the element here instead.
+	 */
+	body.comment-status-closed #comments {
+		display: none;
+	}
+
+#nav-below {
+	display: none;
+}
+
+
+
+/********************  Footer  ********************/
+.site-footer {
+	display:     flex;
+	border-top:  solid 1px #ddd;
+	padding-top: 30px;
+}
+
+	.site-footer .widget-area {
+		flex-grow:     1;
+		padding-left:  10px;
+		padding-right: 10px;
+		border-right:  1px solid #ddd;
+	}
+
+		.site-footer .widget-area:first-child {
+			padding-left: 0;
+		}
+
+		.site-footer .widget-area:last-child {
+			padding-right: 0;
+			border-right:  none;
+		}
+
+	.site-footer .widget-title {
+		margin-top:    0;
+		margin-bottom: 5px;
+	}
+
+	#mc-embedded-subscribe {
+		margin-left: 5px;
+	}
+
+	#social-profiles {
+		display:         flex;
+		justify-content: space-between;
+	}
+
+		#social-profiles li {
+			text-align: center;
+		}
+
+			#social-profiles li:last-child {
+				margin-right: 0;
+			}
+
+			#social-profiles img {
+				width: 35px;
+			}
+
+
+/********************  Tablets  ********************/
+@media only screen and ( max-width : 900px ) {
+	.site {
+		width: auto;
+	}
+
+		.site-logo,
+		.site-logo img {
+			width: 80px;
+		}
+
+		.site-header {
+			margin-bottom: 0;
+		}
+
+			.main-navigation {
+				width:       100%;
+				clear:       both;
+				margin-top:  10px;
+				padding-top: 0;
+				text-align:  center;
+			}
+
+				.main-navigation li {
+					padding-top:    0;
+					padding-bottom: 0;
+				}
+
+		.site-content article:first-child {
+			padding-top: 0;
+		}
+
+		.site-archive-type ul {
+			column-count: 3;
+		}
+
+		#secondary {
+			border-top:    1px solid #ddd;
+			margin-bottom: 1.8em;
+			padding-top:   1.6em;
+		}
+
+			.widget_search input[type="text"] {
+				width: 98%;
+			}
+
+			.widget:last-child {
+				margin-bottom: 0;
+			}
+
+		.site-footer {
+			margin-top:  0;
+			padding-top: 0;
+			border-top:  none;
+		}
+
+			body.single .site-footer,
+			body.page .site-footer {
+				padding-top: 0;
+				border-top:  none;
+			}
+}
+
+@media only screen and ( max-width : 700px ) {
+	.site-archive-type ul {
+		column-count: 2;
+		margin-left:  1em;
+	}
+}
+
+/********************  Phones  ********************/
+@media only screen and ( max-width : 600px ) {
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.6em;
+	}
+
+	.site-header {
+		margin-top: 35px;
+	}
+
+	.site-archive-type ul {
+		column-count: 1;
+	}
+
+	.site-footer {
+		display: block;
+	}
+
+		.site-footer .widget-area {
+			border-right:  none;
+			margin-bottom: 1.8em;
+			padding-left:  0;
+			padding-right: 0;
+		}
+
+		#social-profiles {
+			justify-content: flex-start;
+		}
+
+			#social-profiles li {
+				margin-right: 20px;
+			}
+}
