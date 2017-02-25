@@ -1,13 +1,22 @@
 ### High
 
+* Manual excerpts aren't working on the home page
+	* e.g., https://iandunn.name/wordpress/wp-admin/post.php?post=2098&action=edit
+* The Links page is blank now that it doesn't have a template. Set to draft/delete? Add content via `the_content` ?
+* Align the comment input fields. Can flexbox do this? If not probably just use a table
+* Evenly distribute the space between footer separator and the widgets on each side.
+	* Flexbox might be able to do it properly, or maybe just fake it with padding/margin since it'll always be fixed 
+
 
 
 ### Medium
 
+* The link to reply to an individual comment needs more `margin-top`
+* `code a` vs `a code` - the link colors are different. The blue is probably better
+* keep both new_wp_trim_excerpt() and the bit in show_excerpts() ?
 * disable parent theme javascript and rewrite in native js. will be 1k instead of 115k b/c don't need jquery.
 * add something to visually separate comments from each other. maybe alternating bg color?
-* build custom widgets in mu-plugin for the social profiles and the mailchimp subscribe, use them instead of text widget
-* keep both new_wp_trim_excerpt() and the bit in show_excerpts() ?
+
 
 
 ### Low

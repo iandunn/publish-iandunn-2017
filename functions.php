@@ -3,6 +3,7 @@
 namespace Ian_Dunn_Name\Publish_2017;
 use WP_Post;
 
+add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts'       );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts'          );
 add_action( 'widgets_init',       __NAMESPACE__ . '\register_widget_areas'    );
 add_filter( 'the_content',        __NAMESPACE__ . '\show_excerpts'            );
@@ -12,10 +13,12 @@ add_filter( 'body_class',         __NAMESPACE__ . '\add_comment_body_classes' );
  * Enqueue scripts and styles
  */
 function enqueue_scripts() {
-	wp_enqueue_style(
-		'publish-parent-style',
-		get_template_directory_uri() . '/style.css'
-	);
+	if ( ! is_admin() ) {
+		wp_enqueue_style(
+			'publish-parent-style',
+			get_template_directory_uri() . '/style.css'
+		);
+	}
 
 	wp_enqueue_style(
 		'iandunn-google-fonts',
