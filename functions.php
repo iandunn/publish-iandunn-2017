@@ -64,13 +64,15 @@ function show_excerpts( $content ) {
 	}
 
 	remove_filter( 'the_content', __NAMESPACE__ . '\show_excerpts' ); // avoid infinite recursion
-	$content = get_the_excerpt();
+	$excerpt = get_the_excerpt();
 	add_filter( 'the_content', __NAMESPACE__ . '\show_excerpts' );
 
-	$words_array = preg_split( "/[\n\r\t ]+/", $content, -1, PREG_SPLIT_NO_EMPTY );
-
-	if ( count( $words_array ) > apply_filters( 'excerpt_length', 55 ) ) {
-		$content .= sprintf( '<p class="read-more"><a href="%s">Continue reading...</a></p>', get_the_permalink() );
+	if ( strlen( sanitize_text_field( $excerpt ) ) < strlen( sanitize_text_field( $content ) ) ) {
+		$content = sprintf(
+			'%s <p class="read-more"><a href="%s">Continue reading...</a></p>',
+			$excerpt,
+			get_the_permalink()
+		);
 	}
 
 	return $content;
