@@ -217,6 +217,15 @@ body.page .entry-content {
 	font-size: 1em;
 }
 
+	/* Align the comment form input fields.
+	 *
+	 * This is an ugly hack because the markup doesn't look conducive to a more proper solution.
+	 */
+	.comment-form label {
+		min-width: 75px;
+		display:   inline-block;
+	}
+
 	/*
 	 * Publish outputs #comments even if comments are closed and the count is 0. In order to fix that in the
 	 * template I'd have to add a custom one to this child theme, which is unnecessary clutter. We can just

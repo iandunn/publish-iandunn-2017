@@ -1,7 +1,5 @@
 ### High
 
-* The Links page is blank now that it doesn't have a template. Set to draft/delete? Add content via `the_content` ?
-* Align the comment input fields. Can flexbox do this? If not probably just use a table
 * Evenly distribute the space between footer separator and the widgets on each side.
 	* Flexbox might be able to do it properly, or maybe just fake it with padding/margin since it'll always be fixed
 
