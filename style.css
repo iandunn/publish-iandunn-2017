@@ -278,9 +278,19 @@ body.page .entry-content {
 		margin-bottom: 5px;
 	}
 
-	#mc-embedded-subscribe {
-		margin-left: 5px;
+	#mc-embedded-subscribe-form {
+		display:         flex;
+		justify-content: space-between;
 	}
+
+		#mce-EMAIL {
+			flex-grow: 1;
+		}
+
+		#mc-embedded-subscribe {
+			flex-shrink: 1;
+			margin-left: 7px;
+		}
 
 	#social-profiles {
 		display:         flex;

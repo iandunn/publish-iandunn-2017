@@ -1,6 +1,8 @@
 ### High
 
 * comment author name should be top-aligned w/ gravatar
+* footer email subscribe font too small
+	when tried to set `font-size: 1.2em` it just overflows container
 
 
 ### Medium
