@@ -68,6 +68,11 @@ a {
 	text-decoration: none;
 }
 
+	a code {
+		color: #26ADE4;
+		font-style: inherit;
+	}
+
 blockquote {
 	background-color: #E5F2F8;
 	padding:          2px 7px;
