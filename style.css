@@ -226,6 +226,10 @@ body.page .entry-content {
 		display:   inline-block;
 	}
 
+	.comment .reply {
+		margin-top: 20px;
+	}
+
 	/*
 	 * Publish outputs #comments even if comments are closed and the count is 0. In order to fix that in the
 	 * template I'd have to add a custom one to this child theme, which is unnecessary clutter. We can just

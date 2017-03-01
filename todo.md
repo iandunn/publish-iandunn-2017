@@ -1,12 +1,12 @@
 ### High
 
+* comment author name should be top-aligned w/ gravatar
 
 
 ### Medium
 
-* The link to reply to an individual comment needs more `margin-top`
 * `code a` vs `a code` - the link colors are different. The blue is probably better
-* keep both new_wp_trim_excerpt() and the bit in show_excerpts() ?
+	* https://iandunn.localhost/2016/10/22/accessing-post-meta-and-more-via-post-meta_key/
 * disable parent theme javascript and rewrite in native js. will be 1k instead of 115k b/c don't need jquery.
 * add something to visually separate comments from each other. maybe alternating bg color?
 
