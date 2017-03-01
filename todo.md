@@ -1,8 +1,5 @@
 ### High
 
-* Evenly distribute the space between footer separator and the widgets on each side.
-	* Flexbox might be able to do it properly, or maybe just fake it with padding/margin since it'll always be fixed
-
 
 
 ### Medium

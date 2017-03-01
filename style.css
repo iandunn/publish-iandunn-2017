@@ -250,8 +250,8 @@ body.page .entry-content {
 
 	.site-footer .widget-area {
 		flex-grow:     1;
-		padding-left:  10px;
-		padding-right: 10px;
+		padding-left:  25px;
+		padding-right: 25px;
 		border-right:  1px solid #ddd;
 	}
 
