@@ -222,6 +222,30 @@ body.page .entry-content {
 	font-size: 1em;
 }
 
+	.comment-author {
+		font-weight: inherit;
+		font-size:   1.1em;
+		line-height: inherit;
+	}
+
+		ol.commentlist .avatar {
+			position: relative;
+			top:      7px;
+		}
+
+	.comment-meta {
+		margin-top: -10px;
+		font-size:  .9em;
+	}
+
+		.comment-meta a {
+			font-size: .9em;
+		}
+
+		.comment-meta a::before {
+			content: none;
+		}
+
 	/* Align the comment form input fields.
 	 *
 	 * This is an ugly hack because the markup doesn't look conducive to a more proper solution.

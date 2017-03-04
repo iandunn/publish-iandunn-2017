@@ -8,6 +8,7 @@
 ### Medium
 
 * disable parent theme javascript and rewrite in native js. will be 1k instead of 115k b/c don't need jquery.
+	* this might be useful: https://10up.github.io/wp-component-library/component/responsive-navigation/index.html
 * add something to visually separate comments from each other. maybe alternating bg color?
 
 
