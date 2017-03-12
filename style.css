@@ -166,11 +166,22 @@ body.comment-status-closed .site-content article {
 	.entry-content div,
 	.entry-content p,
 	.entry-content ul,
+	.entry-content ol,
 	.entry-content blockquote {
 		margin-top: 1em;
 	}
 
 		.entry-content p:first-of-type {
+			margin-top: 0;
+		}
+
+	.entry-content ul li,
+	.entry-content ol li {
+		margin-top: .3em;
+	}
+
+		.entry-content ul li:first-of-type,
+		.entry-content ol li:first-of-type {
 			margin-top: 0;
 		}
 
