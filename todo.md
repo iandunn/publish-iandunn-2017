@@ -1,5 +1,30 @@
 ### High
 
+* add styles for <aside> inside a post, for TL;DRs
+	* use them a lot but it'd be nice to format them to the side in a box, or even at the top, but some kind of visual separator
+	* want it to look different than the kind of aside in post about customizing plugins, though. maybe <aside> isn't semantic for TLDR? 
+		maybe that should be a <section class="tldr"> or something? wanna avoid something i'd have to manually put in markup, but i guess have to do that no matter way. 
+		could add gutenberg block though
+	* https://iandunn.name/wordpress/wp-admin/post.php?post=2201&action=edit
+* add styles for asides
+	* like https://iandunn.name/2014/01/10/the-right-way-to-customize-a-wordpress-plugin/ and https://iandunn.name/wordpress/wp-admin/post.php?post=2288&action=edit
+	* make sure that post is using <aside>
+
+* add styles for post titles w/ <code>
+    then change existing posts to use <code> (assuming it looks good)
+
+	https://iandunn.name/2017/03/18/wp_widget-form-returns-a-value/
+	https://iandunn.name/2017/03/06/restoring-lost-commits-after-a-failed-git-svn-dcommit/
+	might also want to convert <code> to backticks in rss, but low priority
+
+* styles for nested lists have too much margin-top
+	* https://iandunn.name/?p=2201&preview=true
+
+* improve pingback styles
+	* https://iandunn.name/2014/01/10/the-right-way-to-customize-a-wordpress-plugin/
+	* group at the bottom instead of inline with comments
+	* maybe just bulleted list
+
 * if comment is held for moderation, still show it for that user
 	too much work to do permenantly (b/c cookie, nonces, etc)
 	but maybe not too hard to display right after they submit, so they at least have some fucking feedback

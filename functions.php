@@ -8,6 +8,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts'          );
 add_action( 'widgets_init',       __NAMESPACE__ . '\register_widget_areas'    );
 add_filter( 'the_content',        __NAMESPACE__ . '\show_excerpts'            );
 add_filter( 'body_class',         __NAMESPACE__ . '\add_comment_body_classes' );
+add_filter( 'publish_custom_header_args', __NAMESPACE__ . '\modify_custom_header' );
 
 /**
  * Enqueue scripts and styles
@@ -98,4 +99,18 @@ function add_comment_body_classes( $classes ) {
 	}
 
 	return $classes;
+}
+
+/**
+ * Modify the custom header arguments.
+ *
+ * @param array $args
+ *
+ * @return array
+ */
+function modify_custom_header( $args ) {
+	// Request a larger Gravatar, since 100 is pixelated.
+	$args['default-image'] = str_replace( '?s=100', '?s=300', $args['default-image'] );
+
+	return $args;
 }
