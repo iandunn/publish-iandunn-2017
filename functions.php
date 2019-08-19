@@ -60,7 +60,7 @@ function register_widget_areas() {
  * @return string
  */
 function show_excerpts( $content ) {
-	if ( is_singular() ) {
+	if ( is_singular() || is_feed() ) {
 		return $content;
 	}
 
