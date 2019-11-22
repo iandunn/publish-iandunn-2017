@@ -78,6 +78,21 @@ blockquote {
 	padding:          2px 7px;
 }
 
+	.wp-block-quote {
+		margin-bottom: 1em;
+	}
+
+/* Newer syntax-highlighted posts (Core `code` block with weston's plugin highlighting the output) */
+.wp-block-code {
+	padding: 0;
+}
+
+	code.hljs {
+		padding: 15px;
+		border: 1px solid #ddd;
+	}
+
+/* Older syntax-highlightedposts (Alex's block/shortcode plugin) */
 code {
 	background-color: #e3e3e3;
 	color:            #454545;
@@ -187,6 +202,16 @@ body.comment-status-closed .site-content article {
 
 	.entry-content p.read-more {
 		margin-top: 1em;
+	}
+
+	/* Below 900px it's already almost full-width */
+	@media only screen and ( min-width : 900px ) {
+		.entry-content .alignwide {
+			width: max-content;
+			min-width: 100%;
+			max-width: 155%;
+			margin-left: -50%;
+		}
 	}
 
 	.entry-meta {

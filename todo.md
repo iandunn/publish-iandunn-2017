@@ -1,14 +1,7 @@
 ### High
 
-* add styles for <aside> inside a post, for TL;DRs
-	* use them a lot but it'd be nice to format them to the side in a box, or even at the top, but some kind of visual separator
-	* want it to look different than the kind of aside in post about customizing plugins, though. maybe <aside> isn't semantic for TLDR? 
-		maybe that should be a <section class="tldr"> or something? wanna avoid something i'd have to manually put in markup, but i guess have to do that no matter way. 
-		could add gutenberg block though
-	* https://iandunn.name/wordpress/wp-admin/post.php?post=2201&action=edit
-* add styles for asides
-	* like https://iandunn.name/2014/01/10/the-right-way-to-customize-a-wordpress-plugin/ and https://iandunn.name/wordpress/wp-admin/post.php?post=2288&action=edit
-	* make sure that post is using <aside>
+setup to use regolith smtp, and test that it's working
+	didn't i already do this?
 
 * add styles for post titles w/ <code>
     then change existing posts to use <code> (assuming it looks good)
@@ -19,6 +12,16 @@
 
 * styles for nested lists have too much margin-top
 	* https://iandunn.name/?p=2201&preview=true
+
+* add styles for <aside> inside a post, for TL;DRs
+	* use them a lot but it'd be nice to format them to the side in a box, or even at the top, but some kind of visual separator
+	* want it to look different than the kind of aside in post about customizing plugins, though. maybe <aside> isn't semantic for TLDR? 
+		maybe that should be a <section class="tldr"> or something? wanna avoid something i'd have to manually put in markup, but i guess have to do that no matter what.
+		could add gutenberg block though
+	* https://iandunn.name/wordpress/wp-admin/post.php?post=2201&action=edit
+* add styles for asides
+	* like https://iandunn.name/2014/01/10/the-right-way-to-customize-a-wordpress-plugin/ and https://iandunn.name/wordpress/wp-admin/post.php?post=2288&action=edit
+	* make sure that post is using <aside>
 
 * improve pingback styles
 	* https://iandunn.name/2014/01/10/the-right-way-to-customize-a-wordpress-plugin/

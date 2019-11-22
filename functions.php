@@ -3,6 +3,7 @@
 namespace Ian_Dunn_Name\Publish_2017;
 use WP_Post;
 
+add_action( 'after_setup_theme',  __NAMESPACE__ . '\setup_theme'              );
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts'       );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts'          );
 add_action( 'widgets_init',       __NAMESPACE__ . '\register_widget_areas'    );
@@ -11,10 +12,22 @@ add_filter( 'body_class',         __NAMESPACE__ . '\add_comment_body_classes' );
 add_filter( 'publish_custom_header_args', __NAMESPACE__ . '\modify_custom_header' );
 
 /**
+ * Add theme support, etc.
+ */
+function setup_theme() {
+	 add_theme_support( 'align-wide' );
+}
+
+/**
  * Enqueue scripts and styles
  */
 function enqueue_scripts() {
-	if ( ! is_admin() ) {
+	if ( is_admin() ) {
+		wp_enqueue_script(
+			'publish-iandunn-admin',
+			get_stylesheet_directory_uri() . '/admin.js'
+		);
+	} else {
 		wp_enqueue_style(
 			'publish-parent-style',
 			get_template_directory_uri() . '/style.css'
