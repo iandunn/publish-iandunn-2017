@@ -207,8 +207,7 @@ body.comment-status-closed .site-content article {
 	/* Below 900px it's already almost full-width */
 	@media only screen and ( min-width : 900px ) {
 		.entry-content .alignwide {
-			width: max-content;
-			min-width: 100%;
+			width: 155%;
 			max-width: 155%;
 			margin-left: -50%;
 		}
