@@ -25,12 +25,22 @@ function enqueue_scripts() {
 	if ( is_admin() ) {
 		wp_enqueue_script(
 			'publish-iandunn-admin',
-			get_stylesheet_directory_uri() . '/admin.js'
+			get_stylesheet_directory_uri() . '/admin.js',
+			array(),
+			filemtime( __DIR__ . '/admin.js' ),
+			true
 		);
 	} else {
 		wp_enqueue_style(
 			'publish-parent-style',
 			get_template_directory_uri() . '/style.css'
+		);
+
+		wp_enqueue_style(
+			'publish-iandunn-style',
+			get_stylesheet_directory_uri() . '/style.css',
+			array( 'publish-parent-style' ),
+			filemtime( __DIR__ . '/style.css' )
 		);
 	}
 
