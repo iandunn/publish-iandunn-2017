@@ -83,7 +83,7 @@ function register_widget_areas() {
  * @return string
  */
 function show_excerpts( $content ) {
-	if ( ! is_front_page() ) {
+	if ( ! is_front_page() && ! is_archive() ) {
 		return $content;
 	}
 
